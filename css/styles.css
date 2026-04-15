@@ -19,26 +19,25 @@ body {
     color: var(--text-black);
     line-height: 1.45;
     -webkit-font-smoothing: antialiased;
-    text-align: left; /* Moving away from the centered-everything look */
+    text-align: left;
 }
 
-/* --- Hero Section (The "Big Entrance") --- */
-.top_container {
+/* --- Hero Section --- */
+.hero-section, .top_container {
     padding: 120px 20px;
     background-color: var(--white);
     text-align: center;
 }
 
 h1 {
-    font-size: 5rem; /* Large, bold statement */
+    font-size: 5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 10px;
     color: var(--text-black);
-    font-family: inherit; /* Removing Sacramento */
 }
 
-.developer {
+.hero-sub, .developer {
     font-size: 1.8rem;
     color: var(--text-gray);
     font-weight: 500;
@@ -47,95 +46,104 @@ h1 {
 }
 
 /* --- The 50/50 Layout (Card Style) --- */
-.middle-container {
+.gallery, .middle-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Re-imagining your 'skills' as Apple product sections */
-.skill-row {
+.card-row, .skill-row {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* Ensures image and text are same height */
     background-color: var(--apple-gray);
-    border-radius: 28px; /* Smooth "Squircle" corners */
+    border-radius: 28px;
     margin-bottom: 40px;
     overflow: hidden;
-    width: 100%; /* Overriding your 50% width */
+    width: 100%;
     min-height: 500px;
     transition: transform 0.4s ease;
 }
 
-.skill-row:hover {
-    transform: scale(1.01); /* Subtle lift on hover */
+.card-row:hover {
+    transform: scale(1.01);
 }
 
-/* Alternating the layout (Odd rows) */
-.skill-row:nth-child(even) {
+.card-row.reverse {
     flex-direction: row-reverse;
 }
 
-.skill-row .text-block {
+.card-text {
     flex: 1;
     padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.skill-row h3 {
+.eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-text h3 {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.skill-row p {
-    font-size: 1.2rem;
-    color: var(--text-gray);
+/* --- Image Handling --- */
+.card-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
 }
 
-/* --- Buttons & Links --- */
-.BUTTON_PLO {
-    background-color: var(--text-black); /* Clean black button */
-    color: var(--white);
-    padding: 12px 24px;
-    border-radius: 980px; /* Fully rounded pill shape */
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    display: inline-block;
-    margin-top: 20px;
-    transition: opacity 0.3s ease;
-    box-shadow: none; /* Removing 2010s shadows */
-    border: none;
+/* Mapping your specific filenames */
+.bg-writing {
+    background-image: url('../images/writingsoftware.png');
 }
 
-.BUTTON_PLO:hover {
-    opacity: 0.8;
-    background-color: var(--text-black);
+.bg-meeting {
+    background-image: url('../images/meeting.png');
 }
 
-/* --- Footer (The "Bottom Bar") --- */
-.bottom-container {
+.bg-mobile {
+    background-image: url('../images/mobiledevice.png');
+}
+
+.bg-person {
+    background-image: url('../images/personusingsoftware.png');
+}
+
+.bg-coaching {
+    background-image: url('../images/coaching.png');
+}
+
+/* --- Footer --- */
+.apple-footer, .bottom-container {
     padding: 60px 20px;
     background-color: var(--apple-gray);
     text-align: center;
 }
 
-.footer-link {
+.footer-link, .nav-links a {
     font-size: 0.9rem;
     color: var(--accent-blue);
     margin: 0 15px;
     text-decoration: none;
 }
 
-.footer-link:hover {
-    text-decoration: underline;
-    font-size: 0.9rem; /* Preventing the 'grow' effect for stability */
-}
-
-/* --- Media Queries (Mobile Readiness) --- */
+/* --- Media Queries --- */
 @media (max-width: 768px) {
-    .skill-row, .skill-row:nth-child(even) {
+    .card-row, .card-row.reverse {
         flex-direction: column;
     }
     h1 { font-size: 3rem; }
-    .skill-row .text-block { padding: 40px 20px; }
+    .card-text { padding: 40px 20px; }
 }
