@@ -191,3 +191,21 @@ h1 {
 html {
     scroll-behavior: smooth;
 }
+
+.banner-image-container {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0; /* Removes tiny white space at the bottom of the image */
+}
+
+.full-width-banner {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    object-fit: cover; /* Ensures it fills the space elegantly */
+}
+
+/* Optional: Add a little breathing room after the image before the next content */
+.banner-image-container {
+    margin-bottom: 2rem;
+}
