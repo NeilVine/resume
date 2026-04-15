@@ -104,7 +104,8 @@ h1 {
     min-height: 300px;
 }
 
-/* Mapping your specific filenames */
+/* Mapping all 5 of your images */
+
 .bg-writing {
     background-image: url('../images/writingsoftware.png');
 }
@@ -113,16 +114,16 @@ h1 {
     background-image: url('../images/meeting.png');
 }
 
-.bg-mobile {
-    background-image: url('../images/mobiledevice.png');
-}
-
 .bg-person {
     background-image: url('../images/personusingsoftware.png');
 }
 
 .bg-coaching {
     background-image: url('../images/coaching.png');
+}
+
+.bg-mobile {
+    background-image: url('../images/mobiledevice.png');
 }
 
 /* --- Footer --- */
