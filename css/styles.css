@@ -148,3 +148,46 @@ h1 {
     h1 { font-size: 3rem; }
     .card-text { padding: 40px 20px; }
 }
+
+/* --- Navigation Links --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--accent-blue);
+}
+
+/* --- The Nav CTA (Apple-style Blue Button) --- */
+.nav-cta {
+    background-color: var(--accent-blue);
+    color: var(--white) !important; /* Forces text to stay white */
+    padding: 6px 16px;
+    border-radius: 980px; /* Pill shape */
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.nav-cta:hover {
+    background-color: #0077ed !important;
+    transform: scale(1.05);
+}
+
+/* --- Smooth Scrolling --- */
+html {
+    scroll-behavior: smooth;
+}
