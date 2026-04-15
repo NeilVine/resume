@@ -3,86 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:ital@1&family=Sacramento&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>Neil Vine</title>
+    <title>Neil Vine | Engineering & Coaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="top_container">
-        <img class="top-cloud" src="https://neilvine.files.wordpress.com/2020/06/seal-advcsm-1.png" alt="cloud-img">
-        <img class="top-right" src="https://neilvine.files.wordpress.com/2020/06/seal-cspo-1.png" alt="cloud-img">
-        <br>
-        <h1>I'm Neil</h1>
-        <h2 class="developer">Scrum Master, Performance Coach, <br>
-                             Manager, Senior Developer.</h2>       
-    </div>
 
-    <div class="middle-container">
-        <div class="profile">
-          <img id="neil_photo" src="images/neil.jpg" alt="photograph of Neil">
-          <h2>Hi</h2>
-          <p>I’m Neil Vine and I’ve worked in software development since 1999. <br>
-             I am a Scrum master to two teams, a line manager, performance coach and senior developer. <br>
-             My teams develop financial trading platforms, primarily using C#.</p>
+    <nav class="apple-nav">
+        <div class="nav-content">
+            <span class="nav-brand">Neil Vine</span>
+            <div class="nav-links">
+                <a href="#engineering">Engineering</a>
+                <a href="#coaching">Coaching</a>
+                <a href="#mentoring">Mentoring</a>
+                <a href="mailto:neil.development@outlook.com" class="nav-cta">Contact</a>
+            </div>
         </div>
-        <hr>
-        <div class="skills">
-          <h2>My Skills</h2>
-          <div class="scrum-master">
-            <img class="scrum" src="https://neilvine.files.wordpress.com/2020/06/psmi-1.png" alt="">
-            <h3>Scrum Master</h3>
-            <p>I can help your organisation's agility.</p>
-          </div>
-          <hr>
-          <div class="skill-row">
-            <h3>Performance Coach</h3>
-            <p>I coach high performers, using the GROW model. <br>
-               Coaching can be a game changer, aiding advancement towards goals. </p>
-          </div>
-          <hr>
-          <div class="skill-row">
-            <h3>Manager</h3>
-            <p>I set high standards and provide fast feedback.</p>
-          </div>
-          <hr>
-          <div class="skill-row">
-            <h3>Software Development</h3>
-            <p>Profesionally, I code in C# .Net WinForms and also some Java on Linux. <br>
-               Outside of work, I use Python Flask and am learning full satck web development </p>
-          </div>
-          <hr>
-          <div class="skill-row">
-            <h3>STEM Ambassador</h3>
-            <p>I have a gift for teaching and have run a session on C# to a class of secondary school students.<br>
-               And also supported teachers in learning Python.</p>
-          </div>
-        </div>
-            
-        <hr>
-        <div class="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>I can support your software development.</h3>
-          <p>Whether you are an organisation or an individual contact me with enquiries.</p>
-          <a class="BUTTON_PLO" href="mailto:neil.development@outlook.com">Contact</a>
-        </div>
-      </div>
-      
-      
-      <div class="bottom-container">
-        <br>
-        <a class="footer-link" href="https://uk.linkedin.com/in/neil-vine-2a2b36162">LinkedIn Profile</a>
-        <br><br>
-        <a class="footer-link" href="https://neilvine.wordpress.com/">Software Development Blog</a>
-        <p>© 2020 Neil Vine.</p>
-      </div>
-      <div>
-        <img class="code" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="">
-        <img class="code-left" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="">
-      </div>
-      
+    </nav>
 
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="fade-in">Neil Vine</h1>
+            <h2 class="hero-sub">Senior Software Developer. <br>Agile Practitioner. Executive Coach.</h2>
+            <p class="hero-intro">Over two decades of building high-performance trading platforms and the high-performance teams that run them.</p>
+        </div>
+    </header>
 
- 
+    <main class="gallery">
+        
+        <section id="engineering" class="card-row">
+            <div class="card-text">
+                <span class="eyebrow">Engineering Excellence</span>
+                <h3>Scale. Precision. Stability.</h3>
+                <p>Developing financial trading platforms since 1999. Specializing in C# .NET and Java, I bridge the gap between legacy reliability and modern full-stack innovation.</p>
+            </div>
+            <div class="card-image bg-tech">
+                </div>
+        </section>
+
+        <section id="coaching" class="card-row reverse">
+            <div class="card-text">
+                <span class="eyebrow">Agile & Executive Coaching</span>
+                <h3>Beyond the GROW Model.</h3>
+                <p>As an ILM Level 5 certified coach, I don't just "manage" teams—I unlock potential. I integrate Systems Thinking and psychometrics to turn group dynamics into competitive advantages.</p>
+            </div>
+            <div class="card-image bg-coaching">
+                 </div>
+        </section>
+
+        <section id="mentoring" class="card-row">
+            <div class="card-text">
+                <span class="eyebrow">Social Impact</span>
+                <h3>Investing in the next generation.</h3>
+                <p>A dedicated STEM Ambassador and Scout Leader. I simplify complex technical concepts to inspire the next wave of engineers and leaders.</p>
+            </div>
+            <div class="card-image bg-stem">
+                 </div>
+        </section>
+
+    </main>
+
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://uk.linkedin.com/in/neil-vine-2a2b36162">LinkedIn</a>
+                <a href="https://neilvine.wordpress.com/">Blog</a>
+                <a href="mailto:neil.development@outlook.com">Email</a>
+            </div>
+            <p class="copyright">© 2026 Neil Vine. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
