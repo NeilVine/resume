@@ -115,6 +115,10 @@ body {
 
 /* Mapping all 5 of your images */
 
+.bg-speech {
+    background-image: url('../images/speech.png');
+}
+
 .bg-writing {
     background-image: url('../images/writingsoftware.png');
 }
