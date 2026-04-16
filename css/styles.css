@@ -139,6 +139,10 @@ body {
     background-image: url('../images/mobiledevice.png');
 }
 
+.bg-psychometrics {
+    background-image: url('../images/psycho.png');
+}
+
 /* --- Footer --- */
 .apple-footer, .bottom-container {
     padding: 60px 20px;
