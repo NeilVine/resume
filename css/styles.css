@@ -190,9 +190,12 @@ body {
 /* --- Navigation Links --- */
 .nav-links {
     display: flex;
-    align-items: center;
-    gap: 30px; /* Space between links */
+    justify-content: space-evenly; /* spreads links evenly */
+    flex-wrap: wrap;               /* allows multiple rows */
+    width: 100%;                   /* take full nav width */
+    gap: 20px;                     /* spacing between rows */
 }
+
 
 .nav-links a {
     text-decoration: none;
