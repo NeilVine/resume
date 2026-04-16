@@ -262,10 +262,10 @@ html {
     /* Nav inner layout becomes vertical */
     .nav-content {
         height: auto;
-        padding: 10px 0;
+        padding: 4px 0;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        gap: 0px;
     }
 
     /* Links stack vertically */
@@ -273,7 +273,7 @@ html {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
     }
 
     /* Larger tap targets */
