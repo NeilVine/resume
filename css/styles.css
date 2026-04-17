@@ -1,10 +1,10 @@
 /* --- Global Reset & Apple Variables --- */
 :root {
     --white: #ffffff;
-    --apple-gray: #f5f5f7;       /* The signature Apple background */
-    --text-black: #1d1d1f;       /* Not quite pure black, feels softer */
-    --text-gray: #86868b;        /* For subtitles and "eyebrow" text */
-    --accent-blue: #0066cc;      /* The classic Apple link blue */
+    --apple-gray: #f5f5f7;       
+    --text-black: #1d1d1f;       
+    --text-gray: #86868b;        
+    --accent-blue: #0066cc;      
 }
 
 * {
@@ -19,183 +19,36 @@ body {
     color: var(--text-black);
     line-height: 1.45;
     -webkit-font-smoothing: antialiased;
-    text-align: left;
 }
 
-/* --- Hero Section --- */
-.hero-section {
-    padding: 80px 20px 20px;
-    background-color: var(--white);
-    text-align: center;
-}
-
-.hero-section h1 {
-    font-size: 2.8rem;        /* Previously too large — this is clean and modern */
-    font-weight: 700;         /* Strong but not heavy */
-    margin-bottom: 0.5rem;    /* Tightens spacing above the subline */
-    letter-spacing: -0.5px;   /* Slight optical refinement */
-}
-
-.hero-sub {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #444;
-    margin-top: 0.25rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.developer {
-    font-size: 1.8rem;
-    color: var(--text-gray);
-    font-weight: 500;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* --- The 50/50 Layout (Card Style) --- */
-.gallery, .middle-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.card-row, .skill-row {
-    display: flex;
-    align-items: stretch; /* Ensures image and text are same height */
-    background-color: var(--apple-gray);
-    border-radius: 28px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    width: 100%;
-    min-height: 500px;
-    transition: transform 0.4s ease;
-}
-
-.card-row:hover {
-    transform: scale(1.01);
-}
-
-.card-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.card-text {
-    flex: 1;
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.eyebrow {
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--text-gray);
-    margin-bottom: 8px;
-    display: block;
-}
-
-.card-text h3 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-/* --- Image Handling --- */
-.card-image {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 300px;
-}
-
-/* Mapping all 5 of your images */
-
-.bg-speech {
-    background-image: url('../images/speech.png');
-}
-
-.bg-writing {
-    background-image: url('../images/writingsoftware.png');
-}
-
-.bg-meeting {
-    background-image: url('../images/meeting.png');
-}
-
-.bg-person {
-    background-image: url('../images/personusingsoftware.png');
-}
-
-.bg-coaching {
-    background-image: url('../images/coaching.png');
-}
-
-.bg-mobile {
-    background-image: url('../images/mobiledevice.png');
-}
-
-.bg-psychometrics {
-    background-image: url('../images/psycho.png');
-}
-
-/* --- Footer --- */
-.apple-footer, .bottom-container {
-    padding: 60px 20px;
-    background-color: var(--apple-gray);
-    text-align: center;
-}
-
-.footer-link, .nav-links a {
-    font-size: 0.9rem;
-    color: var(--accent-blue);
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-/* --- Media Queries --- */
-@media (max-width: 768px) {
-    .card-row, .card-row.reverse {
-        flex-direction: column;
-    }
-    h1 { font-size: 3rem; }
-    .card-text { padding: 40px 20px; }
-}
-
+/* --- Navigation (Modern Fixed Blur) --- */
 .apple-nav {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: var(--white);
-    position: fixed; /* makes it behave like a modern top nav */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid #eee; /* optional, Apple-like */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 60px; /* prevents auto-expanding */
+    height: 52px;
     padding: 0 20px;
 }
 
-
-/* --- Navigation Links --- */
 .nav-links {
     display: flex;
-    justify-content: space-evenly; /* spreads links evenly */
-    flex-wrap: wrap;               /* allows multiple rows */
-    width: 100%;                   /* take full nav width */
-    gap: 20px;                     /* spacing between rows */
+    gap: 30px;
+    align-items: center;
 }
-
 
 .nav-links a {
     text-decoration: none;
@@ -203,7 +56,8 @@ body {
     font-size: 0.85rem;
     font-weight: 500;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -211,88 +65,137 @@ body {
     color: var(--accent-blue);
 }
 
-/* --- The Nav CTA (Apple-style Blue Button) --- */
-.nav-cta {
-    background-color: var(--accent-blue);
-    color: var(--white) !important; /* Forces text to stay white */
-    padding: 6px 16px;
-    border-radius: 980px; /* Pill shape */
-    font-size: 0.8rem !important;
-    font-weight: 600 !important;
-    opacity: 1 !important;
-    transition: transform 0.2s ease, background-color 0.2s ease !important;
+/* --- Hero Section --- */
+.hero-section {
+    padding: 100px 20px 40px; /* Top padding clears the fixed nav */
+    background-color: var(--white);
+    text-align: center;
 }
 
-.nav-cta:hover {
-    background-color: #0077ed !important;
-    transform: scale(1.05);
+.hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
 }
 
-/* --- Smooth Scrolling --- */
-html {
-    scroll-behavior: smooth;
+.hero-sub {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* --- Banner --- */
 .banner-image-container {
     width: 100%;
-    overflow: hidden;
-    line-height: 0; /* Removes tiny white space at the bottom of the image */
+    line-height: 0;
+    margin-bottom: 3rem;
 }
 
 .full-width-banner {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
+    height: auto;
     display: block;
-    object-fit: cover; /* Ensures it fills the space elegantly */
 }
 
-/* Optional: Add a little breathing room after the image before the next content */
-.banner-image-container {
-    margin-bottom: 2rem;
+/* --- Card Layout --- */
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-@media (max-width: 600px) {
+.card-row {
+    display: flex;
+    background-color: var(--apple-gray);
+    border-radius: 28px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    min-height: 500px;
+}
 
-    /* Nav container becomes normal flow */
-    .apple-nav {
-        position: static;
-        height: auto;
-    }
+.card-row.reverse { flex-direction: row-reverse; }
 
-    /* Nav inner layout becomes vertical */
+.card-text {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-text h3 { font-size: 2.2rem; margin-bottom: 15px; }
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.card-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background Images */
+.bg-speech { background-image: url('../images/speech.png'); }
+.bg-writing { background-image: url('../images/writingsoftware.png'); }
+.bg-meeting { background-image: url('../images/meeting.png'); }
+.bg-person { background-image: url('../images/personusingsoftware.png'); }
+.bg-coaching { background-image: url('../images/coaching.png'); }
+.bg-mobile { background-image: url('../images/mobiledevice.png'); }
+.bg-psychometrics { background-image: url('../images/psycho.png'); }
+
+/* --- Footer --- */
+.apple-footer {
+    padding: 60px 20px;
+    background-color: var(--apple-gray);
+    text-align: center;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* --- TABLET BREAKPOINT --- */
+@media (max-width: 1024px) {
+    .nav-links { gap: 15px; }
+    .nav-links a { font-size: 0.8rem; }
+    .card-text { padding: 40px; }
+}
+
+/* --- MOBILE BREAKPOINT --- */
+@media (max-width: 768px) {
     .nav-content {
-        height: auto;
-        padding: 4px 0;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0px;
+        justify-content: flex-start; /* Aligns scrollable items to start */
     }
 
-    /* Links stack vertically */
-    .apple-nav .nav-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
+    .nav-links {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding: 10px 0;
+        width: 100%;
     }
 
-    /* Larger tap targets */
-    .apple-nav .nav-links a {
-        font-size: 0.9rem;
-    }
+    .nav-links::-webkit-scrollbar { display: none; } /* Hides scrollbar for clean look */
 
-    .hero-section {
-        /* Reduce the top padding since the nav is no longer floating over it */
-        padding: 20px 20px 10px; 
-    }
-
-    .hero-section h1 {
-        font-size: 2.2rem; /* Optional: shrink title slightly for small screens */
-        margin-top: 10px;
-    }
+    .card-row, .card-row.reverse { flex-direction: column; min-height: auto; }
+    .card-image { min-height: 300px; }
+    .hero-section h1 { font-size: 2.4rem; }
     
-    .banner-image-container {
-        margin-bottom: 1rem; /* Tighten gap under the banner image too */
-    }
+    .hero-section { padding-top: 80px; }
 }
 
+html {
+    scroll-behavior: smooth;
+    /* Offset so fixed nav doesn't cover section titles */
+    scroll-padding-top: 70px; 
+}
