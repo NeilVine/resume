@@ -192,6 +192,20 @@ body {
     .hero-section h1 { font-size: 2.4rem; }
     
     .hero-section { padding-top: 80px; }
+
+    .card-text h3 {
+        font-size: 1.75rem;       /* Smaller font specifically for mobile */
+        line-height: 1.2;
+        word-wrap: break-word;    /* Older browser support */
+        overflow-wrap: break-word; /* Modern browser support */
+        hyphens: auto;            /* Adds a dash if a word breaks (Optional) */
+    }
+
+    /* Prevent the card-text container from having too much horizontal padding */
+    .card-text {
+        padding: 30px 20px; 
+    }
+    
 }
 
 html {
